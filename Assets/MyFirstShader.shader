@@ -1,13 +1,12 @@
 // Shader created with Shader Forge v1.36 
 // Shader Forge (c) Neat Corporation / Joachim Holmer - http://www.acegikmo.com/shaderforge/
 // Note: Manually altering this data may prevent you from opening it in Shader Forge
-/*SF_DATA;ver:1.36;sub:START;pass:START;ps:flbk:,iptp:0,cusa:False,bamd:0,cgin:,lico:1,lgpr:1,limd:1,spmd:1,trmd:0,grmd:0,uamb:True,mssp:True,bkdf:False,hqlp:False,rprd:False,enco:False,rmgx:True,imps:True,rpth:0,vtps:0,hqsc:True,nrmq:1,nrsp:0,vomd:0,spxs:False,tesm:0,olmd:1,culm:0,bsrc:0,bdst:1,dpts:2,wrdp:True,dith:0,atcv:False,rfrpo:True,rfrpn:Refraction,coma:15,ufog:True,aust:True,igpj:False,qofs:0,qpre:1,rntp:1,fgom:False,fgoc:False,fgod:False,fgor:False,fgmd:0,fgcr:0.5,fgcg:0.5,fgcb:0.5,fgca:1,fgde:0.01,fgrn:0,fgrf:300,stcl:False,stva:128,stmr:255,stmw:255,stcp:6,stps:0,stfa:0,stfz:0,ofsf:0,ofsu:0,f2p0:False,fnsp:False,fnfb:False,fsmp:False;n:type:ShaderForge.SFN_Final,id:4013,x:32921,y:32737,varname:node_4013,prsc:2|diff-6831-OUT,normal-5204-RGB;n:type:ShaderForge.SFN_Tex2d,id:228,x:32432,y:32726,ptovrint:False,ptlb:Diffuse,ptin:_Diffuse,varname:_Diffuse,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,tex:b66bceaf0cc0ace4e9bdc92f14bba709,ntxv:0,isnm:False;n:type:ShaderForge.SFN_Tex2d,id:5204,x:32430,y:32960,ptovrint:False,ptlb:Normals,ptin:_Normals,varname:_Normals,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,tex:bbab0a6f7bae9cf42bf057d8ee2755f6,ntxv:3,isnm:True;n:type:ShaderForge.SFN_Color,id:6862,x:32432,y:32518,ptovrint:False,ptlb:node_6862,ptin:_node_6862,varname:_node_6862,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,c1:1,c2:0,c3:1,c4:1;n:type:ShaderForge.SFN_Multiply,id:6831,x:32667,y:32585,varname:node_6831,prsc:2|A-6862-RGB,B-228-RGB;proporder:228-5204-6862;pass:END;sub:END;*/
+/*SF_DATA;ver:1.36;sub:START;pass:START;ps:flbk:,iptp:0,cusa:False,bamd:0,cgin:,lico:1,lgpr:1,limd:1,spmd:1,trmd:0,grmd:0,uamb:True,mssp:True,bkdf:False,hqlp:False,rprd:False,enco:False,rmgx:True,imps:True,rpth:0,vtps:0,hqsc:True,nrmq:1,nrsp:0,vomd:0,spxs:False,tesm:0,olmd:1,culm:0,bsrc:0,bdst:1,dpts:2,wrdp:True,dith:0,atcv:False,rfrpo:True,rfrpn:Refraction,coma:15,ufog:True,aust:True,igpj:False,qofs:0,qpre:1,rntp:1,fgom:False,fgoc:False,fgod:False,fgor:False,fgmd:0,fgcr:0.5,fgcg:0.5,fgcb:0.5,fgca:1,fgde:0.01,fgrn:0,fgrf:300,stcl:False,stva:128,stmr:255,stmw:255,stcp:6,stps:0,stfa:0,stfz:0,ofsf:0,ofsu:0,f2p0:False,fnsp:False,fnfb:False,fsmp:False;n:type:ShaderForge.SFN_Final,id:4013,x:33415,y:32680,varname:node_4013,prsc:2|diff-8227-OUT,normal-5204-RGB;n:type:ShaderForge.SFN_Tex2d,id:5204,x:32315,y:32916,ptovrint:False,ptlb:Normals,ptin:_Normals,varname:_Normals,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,tex:bbab0a6f7bae9cf42bf057d8ee2755f6,ntxv:3,isnm:True;n:type:ShaderForge.SFN_FragmentPosition,id:4381,x:32315,y:32718,varname:node_4381,prsc:2;n:type:ShaderForge.SFN_Normalize,id:1323,x:32539,y:32736,varname:node_1323,prsc:2|IN-4381-Y;n:type:ShaderForge.SFN_NormalVector,id:6154,x:32355,y:32480,prsc:2,pt:True;n:type:ShaderForge.SFN_ComponentMask,id:2641,x:32528,y:32489,varname:node_2641,prsc:2,cc1:0,cc2:1,cc3:2,cc4:-1|IN-6154-OUT;n:type:ShaderForge.SFN_Dot,id:6301,x:32773,y:32554,varname:node_6301,prsc:2,dt:1|A-2641-G,B-1323-OUT;n:type:ShaderForge.SFN_Dot,id:7414,x:32773,y:32751,varname:node_7414,prsc:2,dt:2|A-2641-G,B-1323-OUT;n:type:ShaderForge.SFN_Vector1,id:2603,x:32773,y:32692,varname:node_2603,prsc:2,v1:0;n:type:ShaderForge.SFN_If,id:3299,x:32966,y:32638,varname:node_3299,prsc:2|A-1323-OUT,B-2603-OUT,GT-6301-OUT,EQ-7414-OUT,LT-7414-OUT;n:type:ShaderForge.SFN_Tex2d,id:9121,x:33032,y:32424,ptovrint:False,ptlb:Diffuse,ptin:_Diffuse,varname:_Diffuse,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,tex:87eda9aa615f5e246ba04794b538dc0b,ntxv:0,isnm:False;n:type:ShaderForge.SFN_Blend,id:8227,x:33223,y:32606,varname:node_8227,prsc:2,blmd:5,clmp:False|SRC-9121-RGB,DST-3299-OUT;proporder:5204-9121;pass:END;sub:END;*/
 
 Shader "Shader Forge/MyFirstShader" {
     Properties {
-        _Diffuse ("Diffuse", 2D) = "white" {}
         _Normals ("Normals", 2D) = "bump" {}
-        _node_6862 ("node_6862", Color) = (1,0,1,1)
+        _Diffuse ("Diffuse", 2D) = "white" {}
     }
     SubShader {
         Tags {
@@ -31,9 +30,8 @@ Shader "Shader Forge/MyFirstShader" {
             #pragma only_renderers d3d9 d3d11 glcore gles 
             #pragma target 3.0
             uniform float4 _LightColor0;
-            uniform sampler2D _Diffuse; uniform float4 _Diffuse_ST;
             uniform sampler2D _Normals; uniform float4 _Normals_ST;
-            uniform float4 _node_6862;
+            uniform sampler2D _Diffuse; uniform float4 _Diffuse_ST;
             struct VertexInput {
                 float4 vertex : POSITION;
                 float3 normal : NORMAL;
@@ -81,7 +79,13 @@ Shader "Shader Forge/MyFirstShader" {
                 float3 indirectDiffuse = float3(0,0,0);
                 indirectDiffuse += UNITY_LIGHTMODEL_AMBIENT.rgb; // Ambient Light
                 float4 _Diffuse_var = tex2D(_Diffuse,TRANSFORM_TEX(i.uv0, _Diffuse));
-                float3 diffuseColor = (_node_6862.rgb*_Diffuse_var.rgb);
+                float node_1323 = normalize(i.posWorld.g);
+                float node_3299_if_leA = step(node_1323,0.0);
+                float node_3299_if_leB = step(0.0,node_1323);
+                float3 node_2641 = normalDirection.rgb;
+                float node_7414 = min(0,dot(node_2641.g,node_1323));
+                float node_3299 = lerp((node_3299_if_leA*node_7414)+(node_3299_if_leB*max(0,dot(node_2641.g,node_1323))),node_7414,node_3299_if_leA*node_3299_if_leB);
+                float3 diffuseColor = max(_Diffuse_var.rgb,node_3299);
                 float3 diffuse = (directDiffuse + indirectDiffuse) * diffuseColor;
 /// Final Color:
                 float3 finalColor = diffuse;
@@ -110,9 +114,8 @@ Shader "Shader Forge/MyFirstShader" {
             #pragma only_renderers d3d9 d3d11 glcore gles 
             #pragma target 3.0
             uniform float4 _LightColor0;
-            uniform sampler2D _Diffuse; uniform float4 _Diffuse_ST;
             uniform sampler2D _Normals; uniform float4 _Normals_ST;
-            uniform float4 _node_6862;
+            uniform sampler2D _Diffuse; uniform float4 _Diffuse_ST;
             struct VertexInput {
                 float4 vertex : POSITION;
                 float3 normal : NORMAL;
@@ -158,7 +161,13 @@ Shader "Shader Forge/MyFirstShader" {
                 float NdotL = max(0.0,dot( normalDirection, lightDirection ));
                 float3 directDiffuse = max( 0.0, NdotL) * attenColor;
                 float4 _Diffuse_var = tex2D(_Diffuse,TRANSFORM_TEX(i.uv0, _Diffuse));
-                float3 diffuseColor = (_node_6862.rgb*_Diffuse_var.rgb);
+                float node_1323 = normalize(i.posWorld.g);
+                float node_3299_if_leA = step(node_1323,0.0);
+                float node_3299_if_leB = step(0.0,node_1323);
+                float3 node_2641 = normalDirection.rgb;
+                float node_7414 = min(0,dot(node_2641.g,node_1323));
+                float node_3299 = lerp((node_3299_if_leA*node_7414)+(node_3299_if_leB*max(0,dot(node_2641.g,node_1323))),node_7414,node_3299_if_leA*node_3299_if_leB);
+                float3 diffuseColor = max(_Diffuse_var.rgb,node_3299);
                 float3 diffuse = directDiffuse * diffuseColor;
 /// Final Color:
                 float3 finalColor = diffuse;
