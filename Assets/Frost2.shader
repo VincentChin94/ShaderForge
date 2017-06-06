@@ -1,16 +1,16 @@
 // Shader created with Shader Forge v1.36 
 // Shader Forge (c) Neat Corporation / Joachim Holmer - http://www.acegikmo.com/shaderforge/
 // Note: Manually altering this data may prevent you from opening it in Shader Forge
-/*SF_DATA;ver:1.36;sub:START;pass:START;ps:flbk:,iptp:0,cusa:False,bamd:0,cgin:,lico:1,lgpr:1,limd:1,spmd:1,trmd:0,grmd:0,uamb:True,mssp:True,bkdf:False,hqlp:False,rprd:False,enco:False,rmgx:True,imps:True,rpth:0,vtps:0,hqsc:True,nrmq:1,nrsp:0,vomd:0,spxs:False,tesm:1,olmd:1,culm:0,bsrc:0,bdst:1,dpts:2,wrdp:True,dith:0,atcv:False,rfrpo:True,rfrpn:Refraction,coma:15,ufog:True,aust:True,igpj:False,qofs:0,qpre:1,rntp:1,fgom:False,fgoc:False,fgod:False,fgor:False,fgmd:0,fgcr:0.5,fgcg:0.5,fgcb:0.5,fgca:1,fgde:0.01,fgrn:0,fgrf:300,stcl:False,stva:128,stmr:255,stmw:255,stcp:6,stps:0,stfa:0,stfz:0,ofsf:0,ofsu:0,f2p0:False,fnsp:False,fnfb:False,fsmp:False;n:type:ShaderForge.SFN_Final,id:4013,x:34460,y:33567,varname:node_4013,prsc:2|diff-628-OUT,spec-6535-RGB,normal-5786-RGB,disp-3731-OUT,tess-9775-OUT;n:type:ShaderForge.SFN_VertexColor,id:3576,x:32585,y:33581,varname:node_3576,prsc:2;n:type:ShaderForge.SFN_Tex2d,id:7922,x:32585,y:33360,ptovrint:False,ptlb:BasicTexture,ptin:_BasicTexture,varname:_BasicTexture,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,tex:4ba0a69370173b047afd75d5f96161e6,ntxv:0,isnm:False;n:type:ShaderForge.SFN_Multiply,id:5396,x:32827,y:33438,varname:node_5396,prsc:2|A-7922-G,B-3576-G;n:type:ShaderForge.SFN_Slider,id:4911,x:32560,y:33767,ptovrint:False,ptlb:SnowAmount,ptin:_SnowAmount,varname:_SnowAmount,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,min:0,cur:10,max:10;n:type:ShaderForge.SFN_Divide,id:8312,x:32951,y:33615,varname:node_8312,prsc:2|A-2499-OUT,B-4911-OUT;n:type:ShaderForge.SFN_Vector1,id:2499,x:32784,y:33581,varname:node_2499,prsc:2,v1:10;n:type:ShaderForge.SFN_Multiply,id:3020,x:33130,y:33496,varname:node_3020,prsc:2|A-5396-OUT,B-1280-RGB,C-8312-OUT;n:type:ShaderForge.SFN_OneMinus,id:655,x:33303,y:33626,varname:node_655,prsc:2|IN-3020-OUT;n:type:ShaderForge.SFN_Add,id:2185,x:33172,y:33775,varname:node_2185,prsc:2|A-655-OUT,B-3576-G;n:type:ShaderForge.SFN_Color,id:7125,x:33628,y:33507,ptovrint:False,ptlb:Colour,ptin:_Colour,varname:_Colour,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,c1:1,c2:1,c3:1,c4:1;n:type:ShaderForge.SFN_Lerp,id:9328,x:33715,y:33777,varname:node_9328,prsc:2|A-7922-RGB,B-7125-RGB,T-6693-OUT;n:type:ShaderForge.SFN_Power,id:2615,x:33964,y:33777,varname:node_2615,prsc:2|VAL-9328-OUT,EXP-4365-OUT;n:type:ShaderForge.SFN_Vector1,id:4365,x:33825,y:33906,varname:node_4365,prsc:2,v1:2;n:type:ShaderForge.SFN_Lerp,id:628,x:34161,y:33849,varname:node_628,prsc:2|A-7922-RGB,B-2615-OUT,T-5722-OUT;n:type:ShaderForge.SFN_Clamp01,id:6148,x:33377,y:33844,varname:node_6148,prsc:2|IN-2185-OUT;n:type:ShaderForge.SFN_Tex2d,id:5786,x:33873,y:33541,ptovrint:False,ptlb:0.8,ptin:_08,varname:_08,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,tex:1b29fc7b67e3f2b4fa6533b9e6cb1387,ntxv:3,isnm:True;n:type:ShaderForge.SFN_Tex2d,id:6535,x:34058,y:33325,ptovrint:False,ptlb:Specular,ptin:_Specular,varname:_Specular,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,tex:ea9b283dc91ec59438a2dcfb901dded9,ntxv:0,isnm:False;n:type:ShaderForge.SFN_Vector1,id:5722,x:34014,y:34014,varname:node_5722,prsc:2,v1:0.9;n:type:ShaderForge.SFN_NormalVector,id:1417,x:32533,y:33989,prsc:2,pt:True;n:type:ShaderForge.SFN_Multiply,id:955,x:32776,y:34087,varname:node_955,prsc:2|A-1417-OUT,B-4932-OUT;n:type:ShaderForge.SFN_Vector3,id:4932,x:32558,y:34199,varname:node_4932,prsc:2,v1:0,v2:1,v3:0;n:type:ShaderForge.SFN_ComponentMask,id:1680,x:32989,y:34114,varname:node_1680,prsc:2,cc1:1,cc2:-1,cc3:-1,cc4:-1|IN-955-OUT;n:type:ShaderForge.SFN_Multiply,id:6693,x:33418,y:34011,varname:node_6693,prsc:2|A-6148-OUT,B-5504-OUT;n:type:ShaderForge.SFN_Vector1,id:9775,x:34462,y:34055,varname:node_9775,prsc:2,v1:5;n:type:ShaderForge.SFN_Multiply,id:3731,x:34014,y:34176,varname:node_3731,prsc:2|A-3600-OUT,B-3089-OUT;n:type:ShaderForge.SFN_Slider,id:3089,x:33746,y:34417,ptovrint:False,ptlb:SnowHeight,ptin:_SnowHeight,varname:_SnowHeight,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,min:0,cur:0,max:0.1;n:type:ShaderForge.SFN_Tex2d,id:4064,x:33342,y:34276,ptovrint:False,ptlb:Noise,ptin:_Noise,varname:_Noise,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,tex:5a0928cee082c77428dee78bc32a75b3,ntxv:0,isnm:False;n:type:ShaderForge.SFN_Clamp01,id:5504,x:33177,y:34114,varname:node_5504,prsc:2|IN-1680-OUT;n:type:ShaderForge.SFN_Multiply,id:3600,x:33786,y:34136,varname:node_3600,prsc:2|A-7420-OUT,B-4064-RGB;n:type:ShaderForge.SFN_Clamp01,id:7420,x:32989,y:34294,varname:node_7420,prsc:2|IN-955-OUT;n:type:ShaderForge.SFN_Tex2d,id:1280,x:33213,y:33205,ptovrint:False,ptlb:Noise2,ptin:_Noise2,varname:_Noise2,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,tex:28c7aad1372ff114b90d330f8a2dd938,ntxv:0,isnm:False;proporder:7922-4911-7125-5786-6535-3089-4064-1280;pass:END;sub:END;*/
+/*SF_DATA;ver:1.36;sub:START;pass:START;ps:flbk:,iptp:0,cusa:False,bamd:0,cgin:,lico:1,lgpr:1,limd:1,spmd:1,trmd:0,grmd:0,uamb:True,mssp:True,bkdf:False,hqlp:False,rprd:False,enco:False,rmgx:True,imps:True,rpth:0,vtps:0,hqsc:True,nrmq:1,nrsp:0,vomd:0,spxs:False,tesm:1,olmd:1,culm:0,bsrc:0,bdst:1,dpts:2,wrdp:True,dith:0,atcv:False,rfrpo:True,rfrpn:Refraction,coma:15,ufog:True,aust:True,igpj:False,qofs:0,qpre:1,rntp:1,fgom:False,fgoc:False,fgod:False,fgor:False,fgmd:0,fgcr:0.5,fgcg:0.5,fgcb:0.5,fgca:1,fgde:0.01,fgrn:0,fgrf:300,stcl:False,stva:128,stmr:255,stmw:255,stcp:6,stps:0,stfa:0,stfz:0,ofsf:0,ofsu:0,f2p0:False,fnsp:False,fnfb:False,fsmp:False;n:type:ShaderForge.SFN_Final,id:4013,x:34460,y:33567,varname:node_4013,prsc:2|diff-628-OUT,spec-6535-RGB,normal-5786-RGB,disp-3731-OUT,tess-9775-OUT;n:type:ShaderForge.SFN_VertexColor,id:3576,x:32585,y:33581,varname:node_3576,prsc:2;n:type:ShaderForge.SFN_Tex2d,id:7922,x:32585,y:33360,ptovrint:False,ptlb:BasicTexture,ptin:_BasicTexture,varname:_BasicTexture,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,tex:4ba0a69370173b047afd75d5f96161e6,ntxv:0,isnm:False;n:type:ShaderForge.SFN_Multiply,id:5396,x:32827,y:33438,varname:node_5396,prsc:2|A-7922-G,B-3576-G;n:type:ShaderForge.SFN_Slider,id:4911,x:32560,y:33767,ptovrint:False,ptlb:SnowAmount,ptin:_SnowAmount,varname:_SnowAmount,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,min:0,cur:10,max:10;n:type:ShaderForge.SFN_Divide,id:8312,x:32951,y:33615,varname:node_8312,prsc:2|A-2499-OUT,B-4911-OUT;n:type:ShaderForge.SFN_Vector1,id:2499,x:32784,y:33581,varname:node_2499,prsc:2,v1:10;n:type:ShaderForge.SFN_Multiply,id:3020,x:33130,y:33496,varname:node_3020,prsc:2|A-5396-OUT,B-1280-RGB,C-8312-OUT;n:type:ShaderForge.SFN_OneMinus,id:655,x:33303,y:33626,varname:node_655,prsc:2|IN-3020-OUT;n:type:ShaderForge.SFN_Add,id:2185,x:33172,y:33775,varname:node_2185,prsc:2|A-655-OUT,B-3576-G;n:type:ShaderForge.SFN_Color,id:7125,x:33628,y:33507,ptovrint:False,ptlb:Colour,ptin:_Colour,varname:_Colour,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,c1:1,c2:1,c3:1,c4:1;n:type:ShaderForge.SFN_Lerp,id:9328,x:33715,y:33777,varname:node_9328,prsc:2|A-7922-RGB,B-7125-RGB,T-6693-OUT;n:type:ShaderForge.SFN_Power,id:2615,x:33964,y:33777,varname:node_2615,prsc:2|VAL-9328-OUT,EXP-4365-OUT;n:type:ShaderForge.SFN_Vector1,id:4365,x:33825,y:33906,varname:node_4365,prsc:2,v1:2;n:type:ShaderForge.SFN_Lerp,id:628,x:34161,y:33849,varname:node_628,prsc:2|A-7922-RGB,B-2615-OUT,T-5722-OUT;n:type:ShaderForge.SFN_Clamp01,id:6148,x:33377,y:33844,varname:node_6148,prsc:2|IN-2185-OUT;n:type:ShaderForge.SFN_Tex2d,id:5786,x:34142,y:33359,ptovrint:False,ptlb:Normals,ptin:_Normals,varname:_Normals,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,tex:1b29fc7b67e3f2b4fa6533b9e6cb1387,ntxv:3,isnm:True;n:type:ShaderForge.SFN_Tex2d,id:6535,x:34142,y:33109,ptovrint:False,ptlb:Specular,ptin:_Specular,varname:_Specular,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,tex:ea9b283dc91ec59438a2dcfb901dded9,ntxv:0,isnm:False;n:type:ShaderForge.SFN_Vector1,id:5722,x:34014,y:34014,varname:node_5722,prsc:2,v1:0.9;n:type:ShaderForge.SFN_NormalVector,id:1417,x:32533,y:33989,prsc:2,pt:True;n:type:ShaderForge.SFN_Multiply,id:955,x:32776,y:34087,varname:node_955,prsc:2|A-1417-OUT,B-4932-OUT;n:type:ShaderForge.SFN_Vector3,id:4932,x:32558,y:34199,varname:node_4932,prsc:2,v1:0,v2:1,v3:0;n:type:ShaderForge.SFN_ComponentMask,id:1680,x:32989,y:34114,varname:node_1680,prsc:2,cc1:0,cc2:-1,cc3:-1,cc4:-1|IN-2419-Y;n:type:ShaderForge.SFN_Multiply,id:6693,x:33418,y:34011,varname:node_6693,prsc:2|A-6148-OUT,B-5504-OUT;n:type:ShaderForge.SFN_Vector1,id:9775,x:34462,y:34055,varname:node_9775,prsc:2,v1:5;n:type:ShaderForge.SFN_Multiply,id:3731,x:34014,y:34176,varname:node_3731,prsc:2|A-3600-OUT,B-4276-OUT;n:type:ShaderForge.SFN_Slider,id:3089,x:33615,y:34368,ptovrint:False,ptlb:SnowHeight,ptin:_SnowHeight,varname:_SnowHeight,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,min:0,cur:0.1,max:0.1;n:type:ShaderForge.SFN_Tex2d,id:4064,x:33342,y:34276,ptovrint:False,ptlb:Noise,ptin:_Noise,varname:_Noise,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,ntxv:0,isnm:False;n:type:ShaderForge.SFN_Clamp01,id:5504,x:33177,y:34114,varname:node_5504,prsc:2|IN-1680-OUT;n:type:ShaderForge.SFN_Multiply,id:3600,x:33786,y:34136,varname:node_3600,prsc:2|A-7420-OUT,B-4064-RGB;n:type:ShaderForge.SFN_Clamp01,id:7420,x:32989,y:34294,varname:node_7420,prsc:2|IN-955-OUT;n:type:ShaderForge.SFN_Tex2d,id:1280,x:33213,y:33205,ptovrint:False,ptlb:Noise2,ptin:_Noise2,varname:_Noise2,prsc:2,glob:False,taghide:False,taghdr:False,tagprd:False,tagnsco:False,tagnrm:False,tex:28c7aad1372ff114b90d330f8a2dd938,ntxv:0,isnm:False;n:type:ShaderForge.SFN_Blend,id:450,x:34226,y:33678,varname:node_450,prsc:2,blmd:12,clmp:True|SRC-628-OUT,DST-7125-RGB;n:type:ShaderForge.SFN_FragmentPosition,id:2419,x:32558,y:34346,varname:node_2419,prsc:2;n:type:ShaderForge.SFN_Sin,id:5589,x:33868,y:34537,varname:node_5589,prsc:2|IN-6278-OUT;n:type:ShaderForge.SFN_Time,id:7658,x:33451,y:34434,varname:node_7658,prsc:2;n:type:ShaderForge.SFN_Multiply,id:4276,x:34014,y:34372,varname:node_4276,prsc:2|A-3089-OUT,B-8980-OUT;n:type:ShaderForge.SFN_Vector1,id:3798,x:33478,y:34621,varname:node_3798,prsc:2,v1:3;n:type:ShaderForge.SFN_Divide,id:6278,x:33694,y:34556,varname:node_6278,prsc:2|A-7658-T,B-3798-OUT;n:type:ShaderForge.SFN_Add,id:8980,x:34065,y:34537,varname:node_8980,prsc:2|A-5589-OUT,B-3274-OUT;n:type:ShaderForge.SFN_Vector1,id:3274,x:33902,y:34670,varname:node_3274,prsc:2,v1:1;proporder:7922-4911-7125-5786-6535-3089-4064-1280;pass:END;sub:END;*/
 
 Shader "Shader Forge/Frost2" {
     Properties {
         _BasicTexture ("BasicTexture", 2D) = "white" {}
         _SnowAmount ("SnowAmount", Range(0, 10)) = 10
         _Colour ("Colour", Color) = (1,1,1,1)
-        _08 ("0.8", 2D) = "bump" {}
+        _Normals ("Normals", 2D) = "bump" {}
         _Specular ("Specular", 2D) = "white" {}
-        _SnowHeight ("SnowHeight", Range(0, 0.1)) = 0
+        _SnowHeight ("SnowHeight", Range(0, 0.1)) = 0.1
         _Noise ("Noise", 2D) = "white" {}
         _Noise2 ("Noise2", 2D) = "white" {}
     }
@@ -39,10 +39,11 @@ Shader "Shader Forge/Frost2" {
             #pragma only_renderers d3d9 d3d11 glcore gles 
             #pragma target 5.0
             uniform float4 _LightColor0;
+            uniform float4 _TimeEditor;
             uniform sampler2D _BasicTexture; uniform float4 _BasicTexture_ST;
             uniform float _SnowAmount;
             uniform float4 _Colour;
-            uniform sampler2D _08; uniform float4 _08_ST;
+            uniform sampler2D _Normals; uniform float4 _Normals_ST;
             uniform sampler2D _Specular; uniform float4 _Specular_ST;
             uniform float _SnowHeight;
             uniform sampler2D _Noise; uniform float4 _Noise_ST;
@@ -106,9 +107,9 @@ Shader "Shader Forge/Frost2" {
                     return o;
                 }
                 void displacement (inout VertexInput v){
-                    float3 node_955 = (v.normal*float3(0,1,0));
                     float4 _Noise_var = tex2Dlod(_Noise,float4(TRANSFORM_TEX(v.texcoord0, _Noise),0.0,0));
-                    v.vertex.xyz += ((saturate(node_955)*_Noise_var.rgb)*_SnowHeight);
+                    float4 node_7658 = _Time + _TimeEditor;
+                    v.vertex.xyz += ((saturate((v.normal*float3(0,1,0)))*_Noise_var.rgb)*(_SnowHeight*(sin((node_7658.g/3.0))+1.0)));
                 }
                 float4 Tessellation(TessVertex v, TessVertex v1, TessVertex v2){
                     return UnityEdgeLengthBasedTess(v.vertex, v1.vertex, v2.vertex, 5.0);
@@ -147,8 +148,8 @@ Shader "Shader Forge/Frost2" {
                 i.normalDir = normalize(i.normalDir);
                 float3x3 tangentTransform = float3x3( i.tangentDir, i.bitangentDir, i.normalDir);
                 float3 viewDirection = normalize(_WorldSpaceCameraPos.xyz - i.posWorld.xyz);
-                float3 _08_var = UnpackNormal(tex2D(_08,TRANSFORM_TEX(i.uv0, _08)));
-                float3 normalLocal = _08_var.rgb;
+                float3 _Normals_var = UnpackNormal(tex2D(_Normals,TRANSFORM_TEX(i.uv0, _Normals)));
+                float3 normalLocal = _Normals_var.rgb;
                 float3 normalDirection = normalize(mul( normalLocal, tangentTransform )); // Perturbed normals
                 float3 lightDirection = normalize(_WorldSpaceLightPos0.xyz);
                 float3 lightColor = _LightColor0.rgb;
@@ -172,8 +173,8 @@ Shader "Shader Forge/Frost2" {
                 indirectDiffuse += UNITY_LIGHTMODEL_AMBIENT.rgb; // Ambient Light
                 float4 _BasicTexture_var = tex2D(_BasicTexture,TRANSFORM_TEX(i.uv0, _BasicTexture));
                 float4 _Noise2_var = tex2D(_Noise2,TRANSFORM_TEX(i.uv0, _Noise2));
-                float3 node_955 = (normalDirection*float3(0,1,0));
-                float3 diffuseColor = lerp(_BasicTexture_var.rgb,pow(lerp(_BasicTexture_var.rgb,_Colour.rgb,(saturate(((1.0 - ((_BasicTexture_var.g*i.vertexColor.g)*_Noise2_var.rgb*(10.0/_SnowAmount)))+i.vertexColor.g))*saturate(node_955.g))),2.0),0.9);
+                float3 node_628 = lerp(_BasicTexture_var.rgb,pow(lerp(_BasicTexture_var.rgb,_Colour.rgb,(saturate(((1.0 - ((_BasicTexture_var.g*i.vertexColor.g)*_Noise2_var.rgb*(10.0/_SnowAmount)))+i.vertexColor.g))*saturate(i.posWorld.g.r))),2.0),0.9);
+                float3 diffuseColor = node_628;
                 float3 diffuse = (directDiffuse + indirectDiffuse) * diffuseColor;
 /// Final Color:
                 float3 finalColor = diffuse + specular;
@@ -205,10 +206,11 @@ Shader "Shader Forge/Frost2" {
             #pragma only_renderers d3d9 d3d11 glcore gles 
             #pragma target 5.0
             uniform float4 _LightColor0;
+            uniform float4 _TimeEditor;
             uniform sampler2D _BasicTexture; uniform float4 _BasicTexture_ST;
             uniform float _SnowAmount;
             uniform float4 _Colour;
-            uniform sampler2D _08; uniform float4 _08_ST;
+            uniform sampler2D _Normals; uniform float4 _Normals_ST;
             uniform sampler2D _Specular; uniform float4 _Specular_ST;
             uniform float _SnowHeight;
             uniform sampler2D _Noise; uniform float4 _Noise_ST;
@@ -272,9 +274,9 @@ Shader "Shader Forge/Frost2" {
                     return o;
                 }
                 void displacement (inout VertexInput v){
-                    float3 node_955 = (v.normal*float3(0,1,0));
                     float4 _Noise_var = tex2Dlod(_Noise,float4(TRANSFORM_TEX(v.texcoord0, _Noise),0.0,0));
-                    v.vertex.xyz += ((saturate(node_955)*_Noise_var.rgb)*_SnowHeight);
+                    float4 node_7658 = _Time + _TimeEditor;
+                    v.vertex.xyz += ((saturate((v.normal*float3(0,1,0)))*_Noise_var.rgb)*(_SnowHeight*(sin((node_7658.g/3.0))+1.0)));
                 }
                 float4 Tessellation(TessVertex v, TessVertex v1, TessVertex v2){
                     return UnityEdgeLengthBasedTess(v.vertex, v1.vertex, v2.vertex, 5.0);
@@ -313,8 +315,8 @@ Shader "Shader Forge/Frost2" {
                 i.normalDir = normalize(i.normalDir);
                 float3x3 tangentTransform = float3x3( i.tangentDir, i.bitangentDir, i.normalDir);
                 float3 viewDirection = normalize(_WorldSpaceCameraPos.xyz - i.posWorld.xyz);
-                float3 _08_var = UnpackNormal(tex2D(_08,TRANSFORM_TEX(i.uv0, _08)));
-                float3 normalLocal = _08_var.rgb;
+                float3 _Normals_var = UnpackNormal(tex2D(_Normals,TRANSFORM_TEX(i.uv0, _Normals)));
+                float3 normalLocal = _Normals_var.rgb;
                 float3 normalDirection = normalize(mul( normalLocal, tangentTransform )); // Perturbed normals
                 float3 lightDirection = normalize(lerp(_WorldSpaceLightPos0.xyz, _WorldSpaceLightPos0.xyz - i.posWorld.xyz,_WorldSpaceLightPos0.w));
                 float3 lightColor = _LightColor0.rgb;
@@ -336,8 +338,8 @@ Shader "Shader Forge/Frost2" {
                 float3 directDiffuse = max( 0.0, NdotL) * attenColor;
                 float4 _BasicTexture_var = tex2D(_BasicTexture,TRANSFORM_TEX(i.uv0, _BasicTexture));
                 float4 _Noise2_var = tex2D(_Noise2,TRANSFORM_TEX(i.uv0, _Noise2));
-                float3 node_955 = (normalDirection*float3(0,1,0));
-                float3 diffuseColor = lerp(_BasicTexture_var.rgb,pow(lerp(_BasicTexture_var.rgb,_Colour.rgb,(saturate(((1.0 - ((_BasicTexture_var.g*i.vertexColor.g)*_Noise2_var.rgb*(10.0/_SnowAmount)))+i.vertexColor.g))*saturate(node_955.g))),2.0),0.9);
+                float3 node_628 = lerp(_BasicTexture_var.rgb,pow(lerp(_BasicTexture_var.rgb,_Colour.rgb,(saturate(((1.0 - ((_BasicTexture_var.g*i.vertexColor.g)*_Noise2_var.rgb*(10.0/_SnowAmount)))+i.vertexColor.g))*saturate(i.posWorld.g.r))),2.0),0.9);
+                float3 diffuseColor = node_628;
                 float3 diffuse = directDiffuse * diffuseColor;
 /// Final Color:
                 float3 finalColor = diffuse + specular;
@@ -369,6 +371,7 @@ Shader "Shader Forge/Frost2" {
             #pragma multi_compile_fog
             #pragma only_renderers d3d9 d3d11 glcore gles 
             #pragma target 5.0
+            uniform float4 _TimeEditor;
             uniform float _SnowHeight;
             uniform sampler2D _Noise; uniform float4 _Noise_ST;
             struct VertexInput {
@@ -415,9 +418,9 @@ Shader "Shader Forge/Frost2" {
                     return o;
                 }
                 void displacement (inout VertexInput v){
-                    float3 node_955 = (v.normal*float3(0,1,0));
                     float4 _Noise_var = tex2Dlod(_Noise,float4(TRANSFORM_TEX(v.texcoord0, _Noise),0.0,0));
-                    v.vertex.xyz += ((saturate(node_955)*_Noise_var.rgb)*_SnowHeight);
+                    float4 node_7658 = _Time + _TimeEditor;
+                    v.vertex.xyz += ((saturate((v.normal*float3(0,1,0)))*_Noise_var.rgb)*(_SnowHeight*(sin((node_7658.g/3.0))+1.0)));
                 }
                 float4 Tessellation(TessVertex v, TessVertex v1, TessVertex v2){
                     return UnityEdgeLengthBasedTess(v.vertex, v1.vertex, v2.vertex, 5.0);
