@@ -1,11 +1,10 @@
 fileFormatVersion: 2
-guid: 40445d7c446d2f64fa174252dbeb0b91
-timeCreated: 1496711863
+guid: 680bb8c9c9f4b134bbaabbe0b64681da
+timeCreated: 1496709401
 licenseType: Free
 ShaderImporter:
   defaultTextures:
   - _Diffuse: {fileID: 2800000, guid: 87eda9aa615f5e246ba04794b538dc0b, type: 3}
-  - _SnowTexture: {fileID: 2800000, guid: ba371855252614506947b2f28f1d8f17, type: 3}
   userData: 
   assetBundleName: 
   assetBundleVariant: 
