@@ -8,10 +8,10 @@ public class SnowGrowth : MonoBehaviour
     private Material[] m_materials;
     private Material m_material;
     private MeshRenderer m_renderer;
-    public float m_snowHeight = 0.0f;
-    public float m_snowAmount = 0.0f;
-    public float m_snowCoverRate = 0.5f;
-    public float m_snowGrowRate = 0.001f;
+    private float m_snowHeight = 0.0f;
+    private float m_snowAmount = 0.0f;
+    private float m_snowCoverRate;
+    private float m_snowGrowRate;
 
     bool inSnowZone = false;
     // Use this for initialization
@@ -78,14 +78,24 @@ public class SnowGrowth : MonoBehaviour
     {
         if (col.CompareTag("SnowGenerator"))
         {
+            
             inSnowZone = true;
+            SnowController snowController = col.GetComponent<SnowController>();
+
+            if(snowController == null)
+            {
+                return;
+            }
+
             if (m_snowHeight < 0.01f)
             {
+                m_snowGrowRate = snowController.m_snowGrowRate;
                 m_snowHeight += m_snowGrowRate * Time.deltaTime;
             }
 
             if (m_snowAmount < 10.0f)
             {
+                m_snowCoverRate = snowController.m_snowCoverRate;
                 m_snowAmount += m_snowCoverRate * Time.deltaTime;
             }
 
