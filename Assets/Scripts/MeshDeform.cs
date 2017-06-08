@@ -62,7 +62,7 @@ public class MeshDeform : MonoBehaviour
 
         if (closest != Vector3.zero)
         {
-            verts[vertNum] = m_mesh.vertices[vertNum] + m_mesh.normals[vertNum] * Random.Range(0.0001f, 0.001f);
+            verts[vertNum] = m_mesh.vertices[vertNum] + m_mesh.normals[vertNum] * Random.Range(0.0001f, 0.005f);
             m_mesh.vertices = verts;
         }
 
