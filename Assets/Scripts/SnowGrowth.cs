@@ -4,43 +4,101 @@ using UnityEngine;
 
 public class SnowGrowth : MonoBehaviour
 {
-    private Shader m_frostShader;
+    public Shader m_shader;
+    private Material[] m_materials;
     private Material m_material;
     private MeshRenderer m_renderer;
     public float m_snowHeight = 0.0f;
     public float m_snowAmount = 0.0f;
+    public float m_snowCoverRate = 0.5f;
+    public float m_snowGrowRate = 0.001f;
+
+    bool inSnowZone = false;
     // Use this for initialization
     void Start()
     {
         m_renderer = this.GetComponent<MeshRenderer>();
 
-        if(m_renderer != null)
+        if (m_renderer != null)
         {
-            m_material = m_renderer.material;
+            m_materials = m_renderer.materials;
+
+            
         }
-       
-       
+
+        //if(m_shader != null)
+        //{
+            //for (int i = 0; i < m_materials.Length; ++i)
+            //{
+            //    //if (m_materials[i].shader == m_shader)
+            //    //{
+            //    //    m_material = m_materials[i];
+            //    //    break;
+            //    //}
+            //}
+        //}
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        for (int i = 0; i < m_materials.Length; ++i)
+        {
+            m_materials[i].SetFloat("_SnowAmount", m_snowAmount);
+            m_materials[i].SetFloat("_SnowHeight", m_snowHeight);
+        }
+
+        if (!inSnowZone)
+        {
+            if (m_snowHeight - m_snowGrowRate > 0.0f)
+            {
+                m_snowHeight -= m_snowGrowRate * Time.deltaTime;
+            }
+            else
+            {
+                m_snowHeight = 0.0f;
+            }
+
+            if (m_snowAmount - m_snowCoverRate > 0.0f)
+            {
+                m_snowAmount -= m_snowCoverRate * Time.deltaTime;
+            }
+            else
+            {
+                m_snowAmount = 0.0f;
+            }
+        }
 
     }
 
-    void OnParticleCollision(GameObject obj)
+
+    void OnTriggerStay(Collider col)
     {
-        if(m_snowHeight < 0.01f)
+        if (col.CompareTag("SnowGenerator"))
         {
-            m_snowHeight += 0.000001f;
+            inSnowZone = true;
+            if (m_snowHeight < 0.01f)
+            {
+                m_snowHeight += m_snowGrowRate * Time.deltaTime;
+            }
+
+            if (m_snowAmount < 10.0f)
+            {
+                m_snowAmount += m_snowCoverRate * Time.deltaTime;
+            }
+
+
         }
-        
-        if(m_snowAmount < 10.0f)
+    }
+
+    void OnTriggerExit(Collider col)
+    {
+        if (col.CompareTag("SnowGenerator"))
         {
-            m_snowAmount += 0.0005f;
+            inSnowZone = false;
         }
-        m_material.SetFloat("_SnowAmount", m_snowAmount);
-        m_material.SetFloat("_SnowHeight", m_snowHeight);
-        //Debug.Log("Collision with particle");
+
     }
 }

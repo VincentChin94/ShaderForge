@@ -24,47 +24,47 @@ public class MeshDeform : MonoBehaviour
     void OnParticleCollision(GameObject obj)
     {
 
-        m_meshFilter = this.GetComponent<MeshFilter>();
+        //m_meshFilter = this.GetComponent<MeshFilter>();
 
-        m_mesh = m_meshFilter.mesh;
+        //m_mesh = m_meshFilter.mesh;
 
-        ps  = obj.GetComponent<ParticleSystem>();
-        int safeLength = ps.GetSafeCollisionEventSize();
+        //ps  = obj.GetComponent<ParticleSystem>();
+        //int safeLength = ps.GetSafeCollisionEventSize();
         
-        int numCollisions = ps.GetCollisionEvents(this.gameObject, collisionEvents);
+        //int numCollisions = ps.GetCollisionEvents(this.gameObject, collisionEvents);
 
 
 
 
 
-        float prevDistance = Mathf.Infinity;
+        //float prevDistance = Mathf.Infinity;
 
-        Vector3[] verts = m_mesh.vertices;
-        int vertNum = 0;
-        Vector3 closest = Vector3.zero;
-        //find closest vertex
+        //Vector3[] verts = m_mesh.vertices;
+        //int vertNum = 0;
+        //Vector3 closest = Vector3.zero;
+        ////find closest vertex
 
-        Vector3 collisionLocation = collisionEvents[0].intersection;
-        for (int i = 0; i < m_mesh.vertexCount; ++i)
-        {
+        //Vector3 collisionLocation = collisionEvents[0].intersection;
+        //for (int i = 0; i < m_mesh.vertexCount; ++i)
+        //{
 
-            float distance = Vector3.Distance(collisionLocation, transform.TransformPoint(m_mesh.vertices[i]));
-            if (distance < prevDistance)
-            {
-                prevDistance = distance;
-                closest = m_mesh.vertices[i];
-                vertNum = i;
-            }
+        //    float distance = Vector3.Distance(collisionLocation, transform.TransformPoint(m_mesh.vertices[i]));
+        //    if (distance < prevDistance)
+        //    {
+        //        prevDistance = distance;
+        //        closest = m_mesh.vertices[i];
+        //        vertNum = i;
+        //    }
 
-        }
+        //}
 
 
 
-        if (closest != Vector3.zero)
-        {
-            verts[vertNum] = m_mesh.vertices[vertNum] + m_mesh.normals[vertNum] * Random.Range(0.0001f, 0.005f);
-            m_mesh.vertices = verts;
-        }
+        //if (closest != Vector3.zero)
+        //{
+        //    verts[vertNum] = m_mesh.vertices[vertNum] + m_mesh.normals[vertNum] * Random.Range(0.0001f, 0.005f);
+        //    m_mesh.vertices = verts;
+        //}
 
 
 
