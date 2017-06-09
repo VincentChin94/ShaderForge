@@ -28,11 +28,7 @@ public class Echolocation : MonoBehaviour
         if (m_scanning)
         {
             m_echoDistance += Time.deltaTime * m_echoSpeed;
-            //foreach (Scannable s in _scannables)
-            //{
-            //    if (Vector3.Distance(ScannerOrigin.position, s.transform.position) <= ScanDistance)
-            //        s.Ping();
-            //}
+
         }
 
         if(Input.GetKeyDown(KeyCode.E))

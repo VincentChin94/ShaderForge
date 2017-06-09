@@ -68,13 +68,6 @@
 			float4 _Color;
 
 
-			float4 grid(float2 uv)
-			{
-				return float4 (sin(uv.x), sin(uv.y), 1, 1);
-			}
-
-
-
 			fixed4 frag (v2f i) : SV_Target
 			{
 
@@ -88,7 +81,7 @@
 				half4 scannerCol = half4(0, 0, 0, 0);
 
 				float dist = distance(wsPos, _WorldSpaceScannerPos);
-				float4 black = float4(0,0,0,1);
+
 				if (dist < _ScanDistance && dist > _ScanDistance - _ScanWidth && linearDepth < 1)
 				{
 					float diff = 1 - (_ScanDistance - dist) / (_ScanWidth);
@@ -96,10 +89,7 @@
 					scannerCol = _Color; 
 					scannerCol *= diff;
 				}
-				else
-				{
-					//col = black;
-				}
+
 
 				return col + scannerCol;
 

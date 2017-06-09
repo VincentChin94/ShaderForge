@@ -26,17 +26,6 @@ public class SnowGrowth : MonoBehaviour
             
         }
 
-        //if(m_shader != null)
-        //{
-            //for (int i = 0; i < m_materials.Length; ++i)
-            //{
-            //    //if (m_materials[i].shader == m_shader)
-            //    //{
-            //    //    m_material = m_materials[i];
-            //    //    break;
-            //    //}
-            //}
-        //}
 
 
     }
@@ -48,7 +37,7 @@ public class SnowGrowth : MonoBehaviour
         {
             m_materials[i].SetFloat("_SnowAmount", m_snowAmount);
             m_materials[i].SetFloat("_SnowHeight", m_snowHeight);
-            //m_materials[i].SetVector("_SnowDirection", m_snowDirection);
+            m_materials[i].SetVector("_SnowDirection", m_snowDirection);
 
         }
 
@@ -83,17 +72,14 @@ public class SnowGrowth : MonoBehaviour
             
             inSnowZone = true;
             SnowController snowController = col.GetComponent<SnowController>();
-            //ParticleSystem snowEmitter = col.GetComponent<ParticleSystem>();
 
-            if(snowController == null)
+
+            if (snowController == null)
             {
                 return;
             }
 
-            //if(snowEmitter!=null)
-            //{
-            //    m_snowDirection = new Vector3(snowEmitter.velocityOverLifetime.x.constant, snowEmitter.velocityOverLifetime.y.constant, snowEmitter.velocityOverLifetime.z.constant);
-            //}
+            m_snowDirection = snowController.m_snowDirection;
 
             if (m_snowHeight < 0.01f)
             {
