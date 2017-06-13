@@ -7,6 +7,7 @@
 		_ScanDistance("Scan Distance", float) = 0
 		_ScanWidth("Scan Width", float) = 10
 		_Color("Color", Color) = (1, 1, 1, 0)
+		_SecondaryColor("SecondaryColor", Color) = (1,1,1,0)
 
 	}
 	SubShader
@@ -66,6 +67,7 @@
 			float _ScanDistance;
 			float _ScanWidth;
 			float4 _Color;
+			float4 _SecondaryColor;
 
 
 			fixed4 frag (v2f i) : SV_Target
@@ -86,7 +88,7 @@
 				{
 					float diff = 1 - (_ScanDistance - dist) / (_ScanWidth);
 					
-					scannerCol = _Color; 
+					scannerCol = lerp(_Color,_SecondaryColor,diff); 
 					scannerCol *= diff;
 				}
 
