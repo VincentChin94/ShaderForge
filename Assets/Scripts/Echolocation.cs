@@ -11,9 +11,11 @@ public class Echolocation : MonoBehaviour
     public float m_echoSpeed = 50;
     public float m_echoDistance;
     // Use this for initialization
+    public ReplacementEffect m_xray;
 
     private Camera _camera;
-    bool m_scanning;
+    bool m_scanning = false;
+    bool m_xrayToggle = false;
     // Update is called once per frame
 
     void OnEnable()
@@ -37,20 +39,17 @@ public class Echolocation : MonoBehaviour
             m_scanning = true;
         }
 
+        if(Input.GetKeyDown(KeyCode.Q))
+        {
+            m_xrayToggle ^= true; 
+        }
+
+        if (m_xray != null)
+        {
+            m_xray.enabled = m_xrayToggle;
+        }
 
 
-        //if (Input.GetMouseButtonDown(0))
-        //{
-        //    Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
-        //    RaycastHit hit;
-
-        //    if (Physics.Raycast(ray, out hit))
-        //    {
-        //        m_scanning = true;
-        //        m_echoDistance = 0;
-        //        m_echoOrigin.position = hit.point;
-        //    }
-        //}
     }
 
 
